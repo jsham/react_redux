@@ -8,5 +8,5 @@ export default createStore(function (state, action){
         return {...state, number: state.number + action.size}
     }
     return state;
-}, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+}, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // reudx 사용을 위해 Parameter 추가 
 )
