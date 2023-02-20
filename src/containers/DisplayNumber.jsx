@@ -1,5 +1,10 @@
-import React, { Component } from "react";
 import DisplayNumber from "../components/DisplayNumber";
+import {connect} from 'react-redux'
+export default connect()(DisplayNumber); // 함수를 실행하면 return 값이 함수고 다시 그 함수를 실행한다.
+
+
+/*
+import React, { Component } from "react";
 import store from "../store";
 
 export default class extends Component {
@@ -13,6 +18,7 @@ export default class extends Component {
         }.bind(this));
     }
     render(){
-        return <DisplayNumber number={this.state.number}></DisplayNumber>
+        return <DisplayNumber number={this.state.number} unit={this.props.unit}></DisplayNumber>
     }
 }
+*/
