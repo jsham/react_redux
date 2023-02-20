@@ -1,6 +1,12 @@
 import DisplayNumber from "../components/DisplayNumber";
 import {connect} from 'react-redux'
-export default connect()(DisplayNumber); // 함수를 실행하면 return 값이 함수고 다시 그 함수를 실행한다.
+
+function mapReduxStateToReactProps(state){
+    return {
+        number: state.number
+    }
+}
+export default connect(mapReduxStateToReactProps)(DisplayNumber); // 함수를 실행하면 return 값이 함수고 다시 그 함수를 실행한다.
 
 
 /*
